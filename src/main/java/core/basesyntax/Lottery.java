@@ -17,8 +17,6 @@ public class Lottery {
      * @return a randomly generated Ball
      */
     public Ball getRandomBall() {
-        int randomNumber = random.nextInt(MAX_NUMBER + 1); // 0..100 inclusive
-        Colors randomColor = colorSupplier.getRandomColor();
-        return new Ball(randomNumber, randomColor);
+        return new Ball(random.nextInt(MAX_NUMBER + 1), colorSupplier.getRandomColor());
     }
 }
